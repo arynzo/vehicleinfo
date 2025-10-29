@@ -3,7 +3,7 @@ import requests
 
 app = FastAPI()
 
-@app.get("/vehicle/{vehicle_number}")
+@app.get("/{vehicle_number}")
 def get_vehicle_info(vehicle_number: str):
     url = "https://rtovehicleinfo.com/new_project/api/vehicle-info"
     data = f'{{"vehicleId":"{vehicle_number}"}}'
